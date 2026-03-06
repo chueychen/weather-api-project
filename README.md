@@ -6,6 +6,15 @@ The program converts a city name into geographic coordinates, retrieves weather 
 
 ---
 
+## Workflow
+User input (city name)
+→ Geocoding API converts city to coordinates
+→ Weather API retrieves forecast data
+→ JSON parsing extracts weather indicators
+→ Gemini API generates outfit recommendations
+
+---
+
 ## Features
 
 - Convert city names into geographic coordinates using the OpenWeather Geocoding API  
@@ -17,11 +26,11 @@ The program converts a city name into geographic coordinates, retrieves weather 
 
 ## Technologies Used
 
-- Python  
-- OpenWeather API  
-- Gemini API  
-- Requests  
-- Environment variables (`.env`)  
+-Python
+-REST APIs (OpenWeather, Gemini)
+-Requests library
+-JSON data parsing
+-Environment variable management (.env)
 
 ---
 
@@ -45,7 +54,7 @@ GEMINI_API_KEY=your_gemini_key
 
 ---
 
-## Example Output
+## Example Program Output
 
 ```
 Weather forecast for the next three hours
