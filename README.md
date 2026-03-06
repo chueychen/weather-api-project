@@ -6,6 +6,12 @@ The program converts a city name into geographic coordinates, retrieves weather 
 
 ---
 
+## Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
+---
+
 ## Workflow
 User input (city name)
 → Geocoding API converts city to coordinates
@@ -26,11 +32,11 @@ User input (city name)
 
 ## Technologies Used
 
--Python
--REST APIs (OpenWeather, Gemini)
--Requests library
--JSON data parsing
--Environment variable management (.env)
+- Python
+- REST APIs (OpenWeather, Gemini)
+- Requests library
+- JSON data parsing
+- Environment variable management (.env)
 
 ---
 
