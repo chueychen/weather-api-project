@@ -2,7 +2,9 @@
 
 This project retrieves weather forecast data using the OpenWeather API and generates AI-powered outfit recommendations using the Gemini API.
 
-The program converts a city name into geographic coordinates, retrieves weather information, and then uses a large language model to suggest appropriate clothing based on the weather conditions.
+It demonstrates how REST APIs can be combined with generative AI to build simple AI-powered applications.
+
+The program converts a city name into geographic coordinates, retrieves real-time weather data, and uses a large language model to suggest appropriate clothing based on weather conditions.
 
 ---
 
