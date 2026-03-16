@@ -27,13 +27,12 @@ User input (city name)
 
 - Python
 - REST APIs
-  - OpenWeather Geocoding API
-  - OpenWeather Forecast API
+  - OpenWeather API (Geocoding and Forecast endpoints)
   - Gemini API
-- `requests`
-- `python-dotenv`
+- requests
+- python-dotenv
 - JSON parsing
-- Environment variable management
+- environment variable management
 
 ## Project Structure
 
