@@ -2,10 +2,15 @@ import os
 import requests
 from dotenv import load_dotenv
 from google import genai
+from google.genai import types
 
 load_dotenv()  # call API_KEY
 openweather_api_key = os.getenv("OPENWEATHER_API_KEY")
 gemini_api_key = os.getenv("GEMINI_API_KEY")
+
+if not gemini_api_key:
+    raise ValueError("GEMINI_API_KEY not found in .env file")
+
 client = genai.Client(api_key=gemini_api_key)
 
 
@@ -74,6 +79,9 @@ def get_weather(lat, lon):
 
 # Define the funtion to get AI dressing suggestions with weather data
 def generate_outfit_recommendation(temp, feels_like, description, humidity, wind_speed, city, country):
+    # Define system message
+    sys_msg = "You are a professional fashion stylist. Give practical, concise outfit advice based on weaather."
+
     prompt = f"""Based on the following weather data, recommend dressing suggestions in two sentences.
     temperature = {temp}
     feels like = {feels_like}
@@ -87,7 +95,14 @@ def generate_outfit_recommendation(temp, feels_like, description, humidity, wind
     try:
         response = client.models.generate_content(
             model="gemini-2.5-flash-lite",
-            contents=prompt
+            contents=prompt,
+
+            # Define temperature and output word count
+            config=types.GenerateContentConfig(
+                system_instruction=sys_msg,
+                temperature=0.6,
+                max_output_tokens=150
+            )
         )
         return response.text
 
